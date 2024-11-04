@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="assets/css/stylesheets.css" rel="stylesheet">
+</head>
+
+    <body>
+        <script>
+            
+            images = new Array;//Array of images
+            images[0] = "assets/images/Sun missing 1.png";
+            images[1] = "assets/images/Sun missing 2.png";
+            images[2] = "assets/images/Sun missing 3.png";
+            images[3] = "assets/images/Sun missing 4.png";
+            images[4] = "assets/images/Sun missing 5.png";
+            images[5] = "assets/images/Sun missing 6.png";
+            images[6] = "assets/images/Sun missing 7.png";
+            images[7] = "assets/images/Sun missing 8.png";
+            images[8] = "assets/images/Sun missing 9.png";
+            images[9] = "assets/images/Sun missing 10.png";
+            images[10] = "assets/images/Sun missing 11.png";
+            images[11] = "assets/images/Moon Full Form.png";
+            images[12] = "assets/images/Moon missing 1.png";
+            images[13] = "assets/images/Moon missing 2.png";
+            images[14] = "assets/images/Moon missing 3.png";
+            images[15] = "assets/images/Moon missing 4.png";
+            images[16] = "assets/images/Moon missing 5.png";
+            images[17] = "assets/images/Moon missing 6.png";
+            images[18] = "assets/images/Moon missing 7.png";
+            images[19] = "assets/images/Moon missing 8.png";
+            images[20] = "assets/images/Moon missing 9.png";
+            images[21] = "assets/images/Moon missing 10.png";
+            images[22] = "assets/images/Moon missing 11.png";
+            ;
+            
+            setInterval( function() //Time changes images after 2000 
+            {
+                changeImage()
+            }, 3000);
+
+            setInterval( function() //Time changes images after 2000 
+            {
+                changeImageIntro()
+            }, 2000);
+
+            x = 0;
+            function changeImageIntro()
+            {
+                let intro = document.getElementById("intro");
+                intro.style.display = "none";
+            }
+            function changeImage()//changes images
+           {
+                document.getElementById('ad').src = images[x];
+
+                if ( x < 22 ) {
+                    x += 1;
+                } else if ( x = 22 ) {
+                    x = 0;
+                }
+            }
+            
+        </script>
+        <img id='intro' src="assets/images/Intro Page Form.png" width="1500" height="100%">
+        <img id='ad' src="assets/images/Sun Full Form.png" width="1500" height="100%">
+
+    </body>
+</html>
